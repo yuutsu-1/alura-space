@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.loader {
+        width: 54px;
+        height: 54px;
+        position: relative;
+        border-radius: 4px;
+        animation: move 4s linear infinite, rotate 2s linear infinite;
+      }
+      
+      @keyframes rotate {
+        0%,
+        20% {
+          transform: rotate(0deg);
+        }
+        30%,
+        40% {
+          transform: rotate(90deg);
+        }
+        50%,
+        60% {
+          transform: rotate(180deg);
+        }
+        70%,
+        80% {
+          transform: rotate(270deg);
+        }
+        90%,
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      </style>
+</head>
+<body>
+    <svg class="loader" id="diceLoader" data-name="5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 133.85 155.44"><title>dice</title>
+        <polygon class="breathe second" points="66.92 154.13 131.55 116.12 66.92 108.51 66.92 154.13" 
+               style="fill:#800000;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px;fill-rule:evenodd"/>
+        <polygon class="breathe second" points="66.92 154.13 66.92 108.51 2.3 116.12 66.92 154.13" 
+               style="fill:#a50000;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe third" points="2.3 116.12 36.51 55.3 2.3 40.09 2.3 116.12" 
+               style="fill:#a01a10;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px;fill-rule:evenodd"/>
+        <polygon class="breathe third" points="36.51 55.3 2.3 40.09 66.92 2.08 36.51 55.3" 
+               style="fill:#f50000;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe fourth" points="97.33 55.3 131.55 40.09 66.92 2.08 97.33 55.3" 
+               style="fill:#ff1b1b;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe fourth" points="97.33 55.3 131.55 116.12 131.55 40.09 97.33 55.3" 
+               style="fill:#fc3232;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px;fill-rule:evenodd"/>
+        <polygon class="breathe first"points="66.92 108.51 131.55 116.12 97.33 55.3 66.92 108.51" 
+               style="fill:#f53636;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe first" points="36.51 55.3 2.3 116.12 66.92 108.51 36.51 55.3" 
+               style="fill:#ff4646;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe first" points="36.51 55.3 66.92 2.08 97.33 55.3 36.51 55.3" 
+               style="fill:#ff5a5a;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px"/>
+        <polygon class="breathe" points="66.92 108.51 97.33 55.3 36.51 55.3 66.92 108.51" 
+               style="fill:#ff5b5b;stroke:#fff;stroke-miterlimit:10;stroke-width:1.5px;fill-rule:evenodd"/>
+    </svg>
+    
+</body>
+</html>

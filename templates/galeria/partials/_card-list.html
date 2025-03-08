@@ -1,0 +1,20 @@
+{% load static %}
+{% for image in images %}
+<li class="card">
+    <a href="{% url 'imagem' image.date %}">
+        <img class="card__imagem" src="{{ image.url }}" alt="{{ image.title }}">
+    </a>
+    <span class="card__tag">{{ image.media_type }}</span>
+    <div class="card__info">
+        <p class="card__titulo">{{ image.title }}</p>
+        <div class="card__texto">
+            <p class="card__descricao">{{ image.descricao|truncatechars:100 }}</p>
+            <span>
+                <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="ícone de coração">
+            </span>
+        </div>
+    </div>
+</li>
+{% empty %}
+<p>Não foi encontrado imagens.</p>
+{% endfor %}
