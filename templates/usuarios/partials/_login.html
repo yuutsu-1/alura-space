@@ -1,0 +1,27 @@
+{% load static %}
+<form class="login__form" hx-post="{% url 'login' %}">
+    <h2 class="login__titulo">Login</h2>
+    {% csrf_token %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    {% for field in form.visible_fields %}
+        <div class="login__campo">
+            <label class="login__label" for="{{ field.id_for_label }}">{{ field.label }}:</label>
+            {{ field }}
+            {% if field.errors %}
+                <div class="login__erro">
+                    {{ field.errors }}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <div class="login__botoes">
+        <button class="login__submit" type="submit">Entrar</button>
+        <a href="#" class="login__link">Esqueceu a senha?</a>
+    </div>
+    <div class="login__registro">
+        <p>Ainda não tem uma conta?</p>
+        <a hx-get="{% url 'auth' %}?type=signup" hx-target="#modal_content" hx-trigger="click" hx-swap="innerHTML" class="login__link">Registre-se</a>
+    </div>
+</form>

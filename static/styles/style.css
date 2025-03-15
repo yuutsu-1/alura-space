@@ -729,6 +729,9 @@ table {
     display: inline-block;
 }
 
+.login__submit.loading span {
+    margin-right: 30px;
+}
 
 .login__link {
     color: #7B78E5;

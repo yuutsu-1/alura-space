@@ -11,4 +11,12 @@
             </form>
         </div>
     </div>
+    <div class="cabecalho__acoes">
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="cabecalho__link">Sair</a>
+        {% else %}
+            <a onclick="abrirModal('login')" class="cabecalho__link" hx-get="{% url 'auth' %}?type=login" hx-target="#modal_content" hx-trigger="click" hx-swap="innerHTML">Login</a>
+            <a onclick="abrirModal('signup')" class="cabecalho__link" hx-get="{% url 'auth' %}?type=signup" hx-target="#modal_content" hx-trigger="click" hx-swap="innerHTML">Registrar</a>
+        {% endif %}
+    </div>
 </header>
